@@ -1,0 +1,43 @@
+{
+ "instance": "matplotlib__matplotlib-25479",
+ "exit_status": "Submitted",
+ "agent_turns": 14,
+ "most_repeated_commands": [
+  [
+   "python test_colormap.py",
+   4
+  ],
+  [
+   "grep -rl \"LinearSegmentedColormap\" .",
+   1
+  ],
+  [
+   "cat lib/matplotlib/cm.py",
+   1
+  ]
+ ],
+ "patch_chars": 661,
+ "patch_head": "diff --git a/test_colormap.py b/test_colormap.py\nnew file mode 100644\nindex 0000000000..4d4dd60214\n--- /dev/null\n+++ b/test_colormap.py\n@@ -0,0 +1,15 @@\n+import matplotlib\n+from matplotlib import cm\n+from matplotlib.colors import LinearSegmentedColormap\n+import matplotlib.pyplot as plt\n+\n+my_cmap_data = [[  1.5e-03,   4.7e-04,   1.4e-02],\n+                [  2.3e-03,   1.3e-03,   1.8e-02],\n+      ",
+ "FAIL_TO_PASS_failed": [
+  "lib/matplotlib/tests/test_colors.py::test_colormap_equals",
+  "lib/matplotlib/tests/test_colors.py::test_set_cmap_mismatched_name"
+ ],
+ "PASS_TO_PASS_failed_count": 0,
+ "strong_models_that_solved_it": [],
+ "commands": [
+  "grep -rl \"LinearSegmentedColormap\" .",
+  "cat lib/matplotlib/cm.py",
+  "cat <<'EOF' > test_colormap.py\nfrom matplotlib import cm\nfrom matplotlib.colors import LinearSegmentedColormap\nimport matplotlib.pyplot as plt\n\nmy_cmap_data = [[  1.5e-03,   4.7e-04,   1.4e-02],\n                [  2.3e-03,   1.3e-03,   1.8e-02],\n                [  3.3e-03,   2.3e-03,   2.4e-02]]\n\nmy",
+  "python test_colormap.py",
+  "sed -i 's/cm.register_cmap(name=/matplotlib.colormaps.register(name=/' test_colormap.py",
+  "python test_colormap.py",
+  "sed -i '1iimport matplotlib' test_colormap.py",
+  "python test_colormap.py",
+  "grep -rl \"register_cmap\" .",
+  "sed -i 's/cm.register_cmap(/matplotlib.colormaps.register(/' lib/matplotlib/pyplot.py",
+  "sed -i 's/cm.register_cmap(/matplotlib.colormaps.register(/' lib/matplotlib/cm.py",
+  "sed -i 's/cm.register_cmap(/matplotlib.colormaps.register(/' lib/matplotlib/_cm.py",
+  "python test_colormap.py",
+  "echo MINI_SWE_AGENT_FINAL_OUTPUT && git add -A && git diff --cached"
+ ]
+}

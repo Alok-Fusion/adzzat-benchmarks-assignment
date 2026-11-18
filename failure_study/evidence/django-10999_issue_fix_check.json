@@ -1,0 +1,37 @@
+[
+ {
+  "input": "-15:30",
+  "expected_by_hidden_test": "-1 day, 23:44:30",
+  "original_code": "-1 day, 23:45:30",
+  "issue_suggested_fix": "-1 day, 23:45:30",
+  "suggested_fix_passes": false
+ },
+ {
+  "input": "-1:15:30",
+  "expected_by_hidden_test": "-1 day, 22:44:30",
+  "original_code": "-1 day, 23:15:30",
+  "issue_suggested_fix": "-1 day, 23:15:30",
+  "suggested_fix_passes": false
+ },
+ {
+  "input": "-00:01:01",
+  "expected_by_hidden_test": "-1 day, 23:58:59",
+  "original_code": "0:01:01",
+  "issue_suggested_fix": "0:01:01",
+  "suggested_fix_passes": false
+ },
+ {
+  "input": "-01:01",
+  "expected_by_hidden_test": "-1 day, 23:58:59",
+  "original_code": "-1 day, 23:59:01",
+  "issue_suggested_fix": "-1 day, 23:59:01",
+  "suggested_fix_passes": false
+ },
+ {
+  "input": "-01:-01",
+  "expected_by_hidden_test": "None",
+  "original_code": "-1 day, 23:58:59",
+  "issue_suggested_fix": "-1 day, 23:58:59",
+  "suggested_fix_passes": false
+ }
+]

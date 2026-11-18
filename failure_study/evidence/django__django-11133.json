@@ -1,0 +1,48 @@
+{
+ "instance": "django__django-11133",
+ "exit_status": "Submitted",
+ "agent_turns": 16,
+ "most_repeated_commands": [
+  [
+   "python test_httpresponse.py",
+   5
+  ],
+  [
+   "grep -r \"class HttpResponse\" .",
+   1
+  ],
+  [
+   "cat django/http/response.py",
+   1
+  ]
+ ],
+ "patch_chars": 42258,
+ "patch_head": "diff --git a/django/http/response.py b/django/http/response.py\nindex 6a84e193ba..0d01fa5bd7 100644\n--- a/django/http/response.py\n+++ b/django/http/response.py\n@@ -137,294 +137,323 @@ class HttpResponseBase:\n         self._headers[header.lower()] = (header, value)\n \n     def __delitem__(self, header):\n-        self._headers.pop(header.lower(), False)\n+        del self._headers[header.lower()]\n \n   ",
+ "FAIL_TO_PASS_failed": [],
+ "PASS_TO_PASS_failed_count": 19,
+ "strong_models_that_solved_it": [
+  "20250929_mini-v1.13.3_sonnet-4-5-20250929",
+  "20250807_mini-v1.7.0_gpt-5",
+  "20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+  "20250726_mini-v1.0.0_gemini-2.5-pro",
+  "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct"
+ ],
+ "commands": [
+  "grep -r \"class HttpResponse\" .",
+  "cat django/http/response.py",
+  "grep -n \"def content(self, value):\" django/http/response.py",
+  "sed -i '311i if isinstance(value, memoryview):\\n            value = bytes(value)' django/http/response.py",
+  "cat <<'EOF' > test_httpresponse.py\nfrom django.http import HttpResponse\nimport unittest\n\nclass HttpResponseTest(unittest.TestCase):\n    def test_memoryview_content(self):\n        content = memoryview(b\"My Content\")\n        response = HttpResponse(content)\n        self.assertEqual(response.content, b",
+  "python test_httpresponse.py",
+  "sed -i '311i\\ \\ \\ \\ if isinstance(value, memoryview):\\n\\ \\ \\ \\ \\ \\ \\ \\ value = bytes(value)' django/http/response.py",
+  "python test_httpresponse.py",
+  "sed -i '311i\\    if isinstance(value, memoryview):\\n        value = bytes(value)' django/http/response.py",
+  "python test_httpresponse.py",
+  "sed -i '311i\\    if isinstance(value, memoryview):' django/http/response.py && sed -i '312i\\        value = bytes(value)' django/http/response.py",
+  "python test_httpresponse.py",
+  "cp django/http/response.py django/http/response.py.bak && cat <<'EOF' > django/http/response.py\nimport datetime\nimport json\nimport mimetypes\nimport os\nimport re\nimport sys\nimport time\nfrom email.header import Header\nfrom http.client import responses\nfrom urllib.parse import quote, urlparse\n\nfrom dja",
+  "python test_httpresponse.py",
+  "cat <<'EOF' > test_settings.py\nSECRET_KEY = 'test_secret_key'\nEOF\nexport DJANGO_SETTINGS_MODULE=test_settings && python test_httpresponse.py",
+  "echo MINI_SWE_AGENT_FINAL_OUTPUT && git add -A && git diff --cached"
+ ]
+}

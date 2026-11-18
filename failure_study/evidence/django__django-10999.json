@@ -1,0 +1,44 @@
+{
+ "instance": "django__django-10999",
+ "exit_status": "Submitted",
+ "agent_turns": 15,
+ "most_repeated_commands": [
+  [
+   "cat dateparse.py",
+   3
+  ],
+  [
+   "ls -la",
+   2
+  ],
+  [
+   "cd django/utils && ls -la",
+   2
+  ]
+ ],
+ "patch_chars": 0,
+ "patch_head": "",
+ "FAIL_TO_PASS_failed": [
+  "test_negative (utils_tests.test_dateparse.DurationParseTests)",
+  "test_parse_postgresql_format (utils_tests.test_dateparse.DurationParseTests)"
+ ],
+ "PASS_TO_PASS_failed_count": 0,
+ "strong_models_that_solved_it": [],
+ "commands": [
+  "ls -la",
+  "cd django/utils && ls -la",
+  "cat dateparse.py",
+  "ls -la",
+  "cd django/utils && ls -la",
+  "cat dateparse.py",
+  "cd ../../ && find . -name dateparse.py",
+  "cd testbed/django/utils && cat dateparse.py",
+  "cd ./testbed/django/utils && cat dateparse.py",
+  "cd /testbed/django/utils && cat dateparse.py",
+  "sed -i 's/\\(\\(\\(:\\?\\)\\?\\)\\(?P<hours>-\\\\?\\d\\+\\):\\)\\(\\?\\=\\d\\+:\\\\?\\d\\+\\)\\?/\\1\\(\\?\\=-\\\\?\\d\\+:\\\\?-\\\\?\\d\\+\\)\\?/' dateparse.py",
+  "cd /testbed/django/utils && sed -i 's/\\(\\(\\(:\\?\\)\\?\\)\\(?P<hours>-\\\\?\\d\\+\\):\\)\\(\\?\\=\\d\\+:\\\\?\\d\\+\\)\\?/\\1\\(\\?\\=-\\\\?\\d\\+:\\\\?-\\\\?\\d\\+\\)\\?/' dateparse.py",
+  "cat dateparse.py",
+  "cd /testbed/django/utils && cat dateparse.py",
+  "echo MINI_SWE_AGENT_FINAL_OUTPUT && git add -A && git diff --cached"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "instance": "django__django-10914",
+ "exit_status": "APIError",
+ "agent_turns": 44,
+ "most_repeated_commands": [
+  [
+   "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+   7
+  ],
+  [
+   "cd django/core/files && grep -A 5 'class FileSystemStorage:' storage.py",
+   5
+  ],
+  [
+   "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+   4
+  ]
+ ],
+ "patch_chars": 2919,
+ "patch_head": "litellm.APIError: APIError: OpenrouterException - Unable to get json response - Expecting value: line 505 column 1 (char 2772), Original Response: \n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n",
+ "FAIL_TO_PASS_failed": [
+  "test_override_file_upload_permissions (test_utils.tests.OverrideSettingsTests)"
+ ],
+ "PASS_TO_PASS_failed_count": 0,
+ "strong_models_that_solved_it": [
+  "20250929_mini-v1.13.3_sonnet-4-5-20250929",
+  "20250807_mini-v1.7.0_gpt-5",
+  "20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+  "20250726_mini-v1.0.0_gemini-2.5-pro",
+  "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct"
+ ],
+ "commands": [
+  "ls -la",
+  "cd django && ls -la",
+  "cd conf && ls -la",
+  "cd core && ls -la",
+  "cd files && ls -la",
+  "cd django/core/files/storage && ls -la",
+  "cd django/core/files && ls -la",
+  "sed -i '/class FileSystemStorage/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cat storage.py",
+  "cd django/core/files && cat storage.py",
+  "sed -i '/FILE_UPLOAD_PERMISSIONS = 0o644/d' storage.py && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && sed -i '/FILE_UPLOAD_PERMISSIONS = 0o644/d' storage.py && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && cat storage.py",
+  "cd django/core/files && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && head -n 50 storage.py",
+  "cd django/core/files && tail -n 50 storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -n '/class FileSystemStorage:/,/^$/p' storage.py",
+  "cd django/core/files && head -n 100 storage.py | tail -n 20",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && head -n 150 storage.py | tail -n 30",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && head -n 150 storage.py | tail -n 30",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py",
+  "cd django/core/files && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && head -n 150 storage.py | tail -n 30",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && cat storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && head -n 150 storage.py | tail -n 30",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && head -n 50 storage.py | tail -n 10",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && grep -A 5 'class FileSystemStorage:' storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && head -n 50 storage.py",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && head -n 100 storage.py | tail -n 20",
+  "cd django/core/files && sed -i '/class FileSystemStorage:/a\\    FILE_UPLOAD_PERMISSIONS = 0o644' storage.py && head -n 150 storage.py | tail -n 30"
+ ]
+}
