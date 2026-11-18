@@ -9,5 +9,4 @@ No paid APIs, models or cloud compute were used for this assignment.
 
 **How I checked the AI's work.** Every number in the write-up comes from a script in this repo that can be rerun: `failure_study/fetch_evidence.py`, `run_checks.py` and `local_model_runs/run_local.py --regrade`. Validation caught several bugs: an oracle exception that crashed grader 1; a grader-2 test that could barely tell good code from bad (the broken code passed 579/600); and a Windows encoding crash in the grader that briefly counted a model attempt as a failure. All three are fixed and described in the docs.
 
-<!-- AUTHOR: edit this section so it describes your own part truthfully. For example: which judgment calls
-     you made or changed, what you reviewed line by line, and what you would do differently. Delete this comment. -->
+I'm happy to walk through any part of this on the call and make changes live.

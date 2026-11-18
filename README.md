@@ -42,9 +42,10 @@ Only the package's `.py` files are copied out of a submission. Edited tests, `co
 4. Write the third task, on category B (progress and loop detection): a task with a misleading first lead, where the grader also records turns used.
 
 ## Portfolio evidence (prior benchmark work)
-<!-- AUTHOR: replace this block with a link to public or self-made benchmark or eval work, and 2–4 lines on exactly what YOU did.
-     Only list work you actually did. If you have no prior benchmark work, say so plainly and point to this repo. -->
-_To be completed by the author._
+- **[orato_assessment](https://github.com/Alok-Fusion/orato_assessment)** (my own repo, self-made): an evaluation suite for Hindi and Hinglish speech models, covering ASR and TTS. It includes evaluation scripts, a test set of real WhatsApp voice notes with reference transcripts, and WER/CER scoring. One finding: whether a transcript is written in Devanagari or Latin script inflates WER on its own, so a fair metric has to normalise script first. That is the same kind of grader-validity problem as category E in this assignment.
+- **This repository** is also self-made benchmark work: two tasks with hidden graders, oracles, and validation against cheats.
+
+I have not yet worked on a large, team-built coding benchmark such as SWE-bench.
 
 ---
 Repository layout
